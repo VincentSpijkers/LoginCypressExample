@@ -4,5 +4,5 @@ COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
-COPY --from=build /home/app/target/LoginCypressExampleApi-0.0.1-SNAPSHOT.jar /usr/local/lib/demo.jar
-ENTRYPOINT ["java","-jar","/usr/local/lib/demo.jar"]
+COPY --from=build /home/app/target/LoginCypressExampleApi-0.0.1-SNAPSHOT.jar /usr/local/lib/LoginCypressExampleApi.jar
+ENTRYPOINT ["java","-jar","/usr/local/lib/LoginCypressExampleApi.jar"]
