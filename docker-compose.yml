@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: frontend
+    container_name: login-cypress-example-app
+    build:
+      context: ./LoginCypressExample
+    ports:
+      - "80:80"
+  backend:
+    image: api
+    container_name: login-cypress-example-api
+    build:
+        context: ./LoginCypressExampleApi
+    ports:
+        - "8080:8080"
+

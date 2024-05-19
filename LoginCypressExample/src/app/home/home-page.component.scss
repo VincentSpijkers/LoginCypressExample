@@ -1,0 +1,6 @@
+@import "../../styles/main-styles";
+@import "../../styles/toaster-styles";
+
+.home-container {
+  @include flex-center-center-row;
+}
